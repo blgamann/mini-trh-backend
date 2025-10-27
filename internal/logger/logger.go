@@ -27,6 +27,7 @@ func InitLogger() error {
 	return nil
 }
 
+// Flush buffered logs before exit
 func Sync() {
 	if Log != nil {
 		// ignore error

@@ -43,9 +43,9 @@ func ConnectDatabase() (*gorm.DB, error) {
 	}
 
 	// Connection pool settings (TRH Backend와 동일)
-	sqlDB.SetMaxIdleConns(10)           // 유휴 연결 최대 개수
-	sqlDB.SetMaxOpenConns(100)          // 최대 연결 개수
-	sqlDB.SetConnMaxLifetime(time.Hour) // 연결 최대 수명
+	sqlDB.SetMaxIdleConns(10)
+	sqlDB.SetMaxOpenConns(100)
+	sqlDB.SetConnMaxLifetime(time.Hour)
 
 	internalLogger.Log.Info("Database connection established successfully")
 	return db, nil
